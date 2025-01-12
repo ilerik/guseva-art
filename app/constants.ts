@@ -49,31 +49,65 @@ export const paintings = [
         src: `/works/mother_russia.jpg`,
         description: `A delicate watercolor portrait where nature meets beauty, featuring subtle floral elements and striking blue eyes that draw the viewer into a moment of contemplation.`,        
         type: `physical`
-    },
-    // { 
-    //     id: 8, 
-    //     title: `Mother Russia`, 
-    //     src: `/works/mother_russia.jpg`,
-    //     description: `A delicate watercolor portrait where nature meets beauty, featuring subtle floral elements and striking blue eyes that draw the viewer into a moment of contemplation.`,        
-    //     type: `physical`
-    // },
-    // { 
-    //     id: 9, 
-    //     title: `Mother Russia`, 
-    //     src: `/works/mother_russia.jpg`,
-    //     description: `A delicate watercolor portrait where nature meets beauty, featuring subtle floral elements and striking blue eyes that draw the viewer into a moment of contemplation.`,        
-    //     type: `physical`
-    // },
+    },    
     { 
-        id: 10, 
+        id: 8, 
         title: `Mother Russia`, 
         src: `/works/mother_russia.jpg`,
         description: `A delicate watercolor portrait where nature meets beauty, featuring subtle floral elements and striking blue eyes that draw the viewer into a moment of contemplation.`,
         span: true,
         type: `physical`
     },
+    { 
+        id: 9, 
+        title: `Balmain SS24`, 
+        src: `/works/balmain-ss24.jpg`,
+        description: `A delicate watercolor portrait where nature meets beauty, featuring subtle floral elements and striking blue eyes that draw the viewer into a moment of contemplation.`,        
+        type: `physical`
+    },
+    { 
+        id: 9, 
+        title: `Dior AW24`, 
+        src: `/works/dior-aw-2024-collection.jpg`,
+        description: `A delicate watercolor portrait where nature meets beauty, featuring subtle floral elements and striking blue eyes that draw the viewer into a moment of contemplation.`,        
+        type: `physical`
+    },
+    { 
+        id: 10, 
+        title: `Dior Backstage SS24`, 
+        src: `/works/dior-backstage-ss-2024.jpg`,
+        description: `A delicate watercolor portrait where nature meets beauty, featuring subtle floral elements and striking blue eyes that draw the viewer into a moment of contemplation.`,        
+        type: `physical`
+    }
   ]
 
+
+// /works/dior-ss24-collection.jpg 
+// /works/dior-ss2024.jpg 
+// /works/enjoy.jpg 
+// /works/giambattistavalli-aw24.jpg 
+// /works/lemon.jpg 
+// /works/lockdown.jpg 
+// /works/loewe-backstage-ss24.jpg 
+// /works/loewe-ss24.jpg 
+// /works/louis-vuitton-ss24.jpg 
+// /works/miu miu-celeb-ss-2024.jpg 
+// /works/miumiu-celeb-ss24-collection.jpg 
+// /works/mother_russia.jpg 
+// /works/russian-style.jpg 
+// /works/schiaparelli-haute-couture-2024.jpg 
+// /works/schiaparelli-haute-couture-collection24.jpg 
+// /works/schiaparelli-ss-2024.jpg /works/schiaparelli.jpg 
+// /works/spring-bloom.jpg 
+// /works/streetstyle-pfw2024.jpg 
+// /works/Valentino-aw 2024.jpg 
+// /works/valentino-aw- 2024.jpg 
+// /works/valentino-aw-2024.jpg 
+// /works/ysl-aw-2024-collection.jpg 
+// /works/ysl-ss24-part1.jpg 
+// /works/ysl-ss24-part2.jpg 
+// /works/ysl-ss204.jpg 
+// /works/zendaya-metgala2024.jpg
 //   const paintings = [
 //     { 
 //       id: 1, 

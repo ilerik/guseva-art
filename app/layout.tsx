@@ -2,6 +2,17 @@ import { Header } from './components/header'
 import { Footer } from './components/footer'
 import '@/app/globals.css'
 
+import type { Metadata } from 'next'
+ 
+export const metadata: Metadata = {
+  title: 'Guseva Art Gallery',
+  description: 'Larisa Guseva and her works of art.',
+  openGraph: {
+    title: 'Guseva Art Gallery (2)',
+    description: 'Larisa Guseva and her works of art. (2)',
+  },
+}
+
 export default function RootLayout({
   children,
 }: {
