@@ -4,6 +4,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 import { paintings } from '@/app/constants'
 
+export function generateStaticParams() {  
+  return paintings.map((item) => {
+    {id: String(item.id)}
+  });
+}
+
 export default function PaintingPage({ params }: { params: { id: string } }) {
   const painting = paintings.find(p => p.id === parseInt(params.id))
 
