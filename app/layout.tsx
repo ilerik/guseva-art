@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Guseva Art Gallery',
   description: 'Larisa Guseva and her works of art.',
   verification: {
-    yandex: "055acd79377c5c08",
+    yandex: "84a25adc1f1b1b43",
   },
   openGraph: {
     title: 'Guseva Art Gallery',
