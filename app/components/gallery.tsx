@@ -6,10 +6,10 @@ import { paintings } from '@/app/constants'
 export function Gallery() {
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
-      {paintings.map((painting) => (
+      {paintings.map((painting, index) => (
         <Link 
-          href={`/painting/${painting.id}`} 
-          key={painting.id} 
+          href={`/painting/${index}`} 
+          key={index} 
           className={`relative group ${painting.span ? 'col-span-2 row-span-2' : ''}`}
         >
           <Image
