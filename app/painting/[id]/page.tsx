@@ -5,8 +5,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { paintings } from '@/app/constants'
 
 export function generateStaticParams() {  
-  return paintings.map((item) => {
-    {id: String(item.id)}
+  return paintings.map((item, index) => {
+    {id: String(index)}
   });
 }
 
