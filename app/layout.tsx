@@ -7,9 +7,12 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Guseva Art Gallery',
   description: 'Larisa Guseva and her works of art.',
+  verification: {
+    yandex: "055acd79377c5c08",
+  },
   openGraph: {
-    title: 'Guseva Art Gallery (2)',
-    description: 'Larisa Guseva and her works of art. (2)',
+    title: 'Guseva Art Gallery',
+    description: 'Larisa Guseva and her works of art.',
   },
 }
 
