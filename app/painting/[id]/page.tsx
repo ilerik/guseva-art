@@ -11,7 +11,7 @@ export function generateStaticParams() {
 }
 
 export default function PaintingPage({ params }: { params: { id: string } }) {
-  const painting = paintings.find(p => p.id === parseInt(params.id))
+  const painting = paintings[parseInt(params.id)];
 
   if (!painting) {
     notFound()
