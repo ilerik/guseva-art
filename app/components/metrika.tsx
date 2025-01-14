@@ -14,7 +14,8 @@ export function Metrika() {
 
   return (
     <Script id="yandex-metrika" defer>
-      {`<!-- Yandex.Metrika counter -->        
+      {`<!-- Yandex.Metrika counter -->
+        <script type="text/javascript" >
         (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
         m[i].l=1*new Date();
         for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
@@ -27,7 +28,9 @@ export function Metrika() {
             trackLinks:true,
             accurateTrackBounce:true,
             webvisor:true
-        });                
+        });
+        </script>
+        <noscript><div><img src="https://mc.yandex.ru/watch/99524718" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
         <!-- /Yandex.Metrika counter -->
       `}
     </Script>
