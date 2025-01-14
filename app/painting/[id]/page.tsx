@@ -1,6 +1,9 @@
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import Image from 'next/image'
+import Link from 'next/link'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 import { paintings } from '@/app/constants'
 
@@ -40,14 +43,52 @@ export default function PaintingPage({ params }: { params: { id: string } }) {
         </div>
       </CardHeader>
       <CardContent className="space-y-6">
-        <Image
-          src={painting.src}
-          alt={painting.title}
-          width={800}
-          height={800}
-          className="w-full h-auto rounded-lg shadow-md"
-        />
-        <p className="text-lg leading-relaxed">{painting.description}</p>
+      <div className="relative">
+          <Image
+            src={currentPainting.src}
+            alt={currentPainting.title}
+            width={800}
+            height={800}
+            className="w-full h-auto rounded-lg shadow-md"
+          />
+          {prevPainting && (
+            <Link
+              href={`/painting/${prevPainting.id}`}
+              className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/50 hover:bg-white/75 rounded-full p-2 transition-colors"
+              aria-label="Previous painting"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </Link>
+          )}
+          {nextPainting && (
+            <Link
+              href={`/painting/${nextPainting.id}`}
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/50 hover:bg-white/75 rounded-full p-2 transition-colors"
+              aria-label="Next painting"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </Link>
+          )}
+        </div>
+        <p className="text-lg leading-relaxed">{currentPainting.description}</p>
+        <div className="flex justify-between">
+          {prevPainting && (
+            <Link
+              href={`/painting/${prevPainting.id}`}
+              className="text-primary hover:underline"
+            >
+              ← Previous: {prevPainting.title}
+            </Link>
+          )}
+          {nextPainting && (
+            <Link
+              href={`/painting/${nextPainting.id}`}
+              className="text-primary hover:underline ml-auto"
+            >
+              Next: {nextPainting.title} →
+            </Link>
+          )}
+        </div>
       </CardContent>
     </Card>
   )
