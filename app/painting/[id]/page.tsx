@@ -13,27 +13,31 @@ export function generateStaticParams() {
 }
 
 export default function PaintingPage({ params }: { params: { id: string } }) {
-  const painting = paintings[parseInt(params.id)];
+  const currentPainting = paintings[parseInt(params.id)];
 
-  if (!painting) {
+  if (!currentPainting) {
     notFound()
   }
+
+  const currentIndex = paintings.findIndex(p => p.id === currentPainting.id)
+  const prevPainting = paintings[currentIndex - 1] || null
+  const nextPainting = paintings[currentIndex + 1] || null
 
   return (
     <Card className="max-w-4xl mx-auto">
       <CardHeader>
         <div className="flex items-center justify-between">
-          <CardTitle className="text-3xl font-bold">{painting.title}</CardTitle>
+          <CardTitle className="text-3xl font-bold">{currentPainting.title}</CardTitle>
           <div className="flex gap-2">
             <span className={`
               px-2 py-1 rounded-full text-sm font-medium
-              ${painting.type === 'physical' 
+              ${currentPainting.type === 'physical' 
                 ? 'bg-blue-500/80 text-white' 
                 : 'bg-purple-500/80 text-white'}
             `}>
-              {painting.type === 'physical' ? 'Physical' : 'Digital'}
+              {currentPainting.type === 'physical' ? 'Physical' : 'Digital'}
             </span>
-            {painting.sold && (
+            {currentPainting.sold && (
               <span className="px-2 py-1 rounded-full text-sm font-medium bg-red-500/80 text-white">
                 Sold
               </span>

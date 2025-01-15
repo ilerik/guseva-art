@@ -1,4 +1,16 @@
-export const paintings = [
+export type PaintingType = 'physical' | 'digital'
+
+export interface Painting {
+  id: number
+  title: string
+  src: string
+  description: string
+  span?: boolean
+  type: PaintingType
+  sold?: boolean
+}
+
+export const paintings: Painting[] = [
   { 
     title: `Schiaparelli`, 
     src: `/works/schiaparelli-ss-2024.jpg`,
@@ -38,48 +50,48 @@ export const paintings = [
     type: `physical`
   },
   { 
-      title: `Dior SS24 Collection`, 
-      src: `/works/dior-ss24-collection.jpg `,
-      description: `A delicate watercolor portrait where nature meets beauty, featuring subtle floral elements and striking blue eyes that draw the viewer into a moment of contemplation.`,        
-      type: `physical`
-  },    
-  { 
-      title: `Mother Russia`, 
-      src: `/works/mother_russia.jpg`,
-      description: `A delicate watercolor portrait where nature meets beauty, featuring subtle floral elements and striking blue eyes that draw the viewer into a moment of contemplation.`,
-      span: true,
-      type: `physical`
-  },
-  { 
-      title: `Balmain SS24`, 
-      src: `/works/balmain-ss24.jpg`,
-      description: `A delicate watercolor portrait where nature meets beauty, featuring subtle floral elements and striking blue eyes that draw the viewer into a moment of contemplation.`,        
-      type: `physical`
-  },
-  { 
-      title: `Dior AW24`, 
-      src: `/works/dior-aw-2024-collection.jpg`,
-      description: `A delicate watercolor portrait where nature meets beauty, featuring subtle floral elements and striking blue eyes that draw the viewer into a moment of contemplation.`,        
-      type: `physical`
-  },
-  { 
-      title: `Dior Backstage SS24`, 
-      src: `/works/dior-backstage-ss-2024.jpg`,
-      description: `A delicate watercolor portrait where nature meets beauty, featuring subtle floral elements and striking blue eyes that draw the viewer into a moment of contemplation.`,        
-      type: `physical`
-  },
-  { 
-      title: `Dior SS2024`, 
-      src: `/works/dior-ss2024.jpg`,
-      description: `A delicate watercolor portrait where nature meets beauty, featuring subtle floral elements and striking blue eyes that draw the viewer into a moment of contemplation.`,        
-      type: `physical`
-  },
-  { 
-      title: `Giambattistavalli AW2024`, 
-      src: `/works/giambattistavalli-aw24.jpg `,
-      description: `A delicate watercolor portrait where nature meets beauty, featuring subtle floral elements and striking blue eyes that draw the viewer into a moment of contemplation.`,        
-      type: `physical`
-  },
+    title: `Dior SS24 Collection`, 
+    src: `/works/dior-ss24-collection.jpg`,
+    description: `A showcase of Dior's Spring/Summer 2024 collection, featuring elegant designs and luxurious fabrics that highlight the brand's commitment to craftsmanship and innovation.`,
+    type: `physical`
+    },    
+    { 
+        title: `Mother Russia`, 
+        src: `/works/mother_russia.jpg`,
+        description: `An evocative portrait that blends traditional Russian elements with contemporary fashion, capturing the essence of cultural heritage and modern style.`,
+        span: true,
+        type: `physical`
+    },
+    { 
+        title: `Balmain SS24`, 
+        src: `/works/balmain-ss24.jpg`,
+        description: `A striking piece from Balmain's Spring/Summer 2024 collection, showcasing bold designs and intricate details that reflect the brand's avant-garde approach to fashion.`,
+        type: `physical`
+    },
+    { 
+        title: `Dior AW24`, 
+        src: `/works/dior-aw-2024-collection.jpg`,
+        description: `A highlight of Dior's Autumn/Winter 2024 collection, featuring sophisticated silhouettes and rich textures that embody the brand's timeless elegance.`,
+        type: `physical`
+    },
+    { 
+        title: `Dior Backstage SS24`, 
+        src: `/works/dior-backstage-ss-2024.jpg`,
+        description: `A behind-the-scenes glimpse of Dior's Spring/Summer 2024 collection, capturing the energy and creativity of the fashion show preparation.`,
+        type: `physical`
+    },
+    { 
+        title: `Dior SS2024`, 
+        src: `/works/dior-ss2024.jpg`,
+        description: `A piece from Dior's Spring/Summer 2024 collection, featuring delicate floral motifs and refined craftsmanship that highlight the brand's dedication to beauty and elegance.`,
+        type: `physical`
+    },
+    { 
+        title: `Giambattistavalli AW2024`, 
+        src: `/works/giambattistavalli-aw24.jpg`,
+        description: `A showcase of Giambattistavalli's Autumn/Winter 2024 collection, featuring luxurious fabrics and intricate designs that reflect the brand's opulent style.`,
+        type: `physical`
+    },
   // New entries
   { 
       title: `Lemon`, 
@@ -183,4 +195,4 @@ export const paintings = [
       description: `A stunning portrait of Zendaya at the Met Gala 2024, capturing her elegance and style.`,
       type: `physical`
   }
-];
+].map((item, index) => {return { id: index, ...item }});
