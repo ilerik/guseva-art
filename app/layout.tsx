@@ -1,6 +1,7 @@
 import { Header } from './components/header'
 import { Footer } from './components/footer'
 import { Metrika } from "@/app/components/metrika";
+import { Suspense } from 'react';
 import '@/app/globals.css'
 
 import Script from "next/script"
@@ -31,7 +32,10 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
-        <Script id="yandex-metrika" defer>
+        <Suspense>
+          <Metrika />
+        </Suspense>
+        {/* <Script id="yandex-metrika" defer>
           {`<!-- Yandex.Metrika counter -->        
             (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
             m[i].l=1*new Date();
@@ -48,12 +52,8 @@ export default function RootLayout({
             });                
             <!-- /Yandex.Metrika counter -->
           `}
-        </Script>
+        </Script> */}
       </body>
     </html>
   )
 }
-
-
-
-import './globals.css'
