@@ -18,7 +18,7 @@ export function Header() {
           </Link>
         </div>
         <nav className="flex items-center space-x-4">
-          <Link href="/" className="text-foreground hover:text-primary transition-colors">
+          <Link href="/#gallery" className="text-foreground hover:text-primary transition-colors">
             Gallery
           </Link>
           <Link href="/about" className="text-foreground hover:text-primary transition-colors">
