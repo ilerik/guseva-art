@@ -1,5 +1,6 @@
-import { Gallery } from './components/gallery'
-import { IntroCard } from './components/intro-card'
+import { Gallery } from "./components/gallery"
+import { IntroCard } from "./components/intro-card"
+import { Contacts } from "./components/contacts"
 
 export default function Home() {
   return (
@@ -7,9 +8,9 @@ export default function Home() {
       <IntroCard />
       <div id="gallery">
         <Gallery />
-      </div>
+      </div>      
+      <Contacts />      
     </div>
   )
 }
-
 
