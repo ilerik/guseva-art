@@ -3,8 +3,13 @@ import { notFound } from 'next/navigation'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Link from 'next/link'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import type { Metadata } from "next"
 
 import { paintings } from '@/app/constants'
+
+interface PaintingPageProps {
+  params: { id: string }
+}
 
 export function generateStaticParams() {  
   return paintings.map((item, index) => {
@@ -12,7 +17,40 @@ export function generateStaticParams() {
   });
 }
 
-export default function PaintingPage({ params }: { params: { id: string } }) {
+export async function generateMetadata({ params }: PaintingPageProps): Promise<Metadata> {
+  const painting = paintings.find((p) => p.id === Number.parseInt(params.id))
+
+  if (!painting) {
+    return {
+      title: "Painting Not Found",
+    }
+  }
+
+  return {
+    title: `${painting.title} | Larisa Guseva Art`,
+    description: painting.description,
+    openGraph: {
+      title: `${painting.title} | Larisa Guseva Art`,
+      description: painting.description,
+      images: [
+        {
+          url: painting.src,
+          width: 800,
+          height: 800,
+          alt: painting.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${painting.title} | Larisa Guseva Art`,
+      description: painting.description,
+      images: [painting.src],
+    },
+  }
+}
+
+export default function PaintingPage({ params }: PaintingPageProps) {
   const currentPainting = paintings[parseInt(params.id)];
 
   if (!currentPainting) {
