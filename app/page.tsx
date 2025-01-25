@@ -5,10 +5,8 @@ import { Contacts } from "./components/contacts"
 export default function Home() {
   return (
     <div className="space-y-8">
-      <IntroCard />
-      <div id="gallery">
-        <Gallery />
-      </div>      
+      <IntroCard />      
+      <Gallery />
       <Contacts />      
     </div>
   )

@@ -5,6 +5,8 @@ import { paintings } from '@/app/constants'
 
 export function Gallery() {
   return (
+    <div id='gallery'>
+    <h2 className="text-2xl font-bold mb-4">My Artworks</h2>
     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
       {paintings.map((painting, index) => (
         <Link 
@@ -39,6 +41,7 @@ export function Gallery() {
           </div>
         </Link>
       ))}
+    </div>
     </div>
   )
 }

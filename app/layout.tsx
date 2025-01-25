@@ -9,14 +9,15 @@ import type { Metadata } from 'next'
  
 export const metadata: Metadata = {
   title: 'Guseva Art Gallery',
-  description: 'Larisa Guseva and her works of art.',
+  description: 'Explore the vibrant world of fashion illustration and painting by Larisa Guseva.',
   verification: {
     yandex: "e16fcf10e2fb2b44",
   },
   openGraph: {
     title: 'Guseva Art Gallery',
-    description: 'Larisa Guseva and her works of art.',
+    description: 'Explore the vibrant world of fashion illustration and painting by Larisa Guseva.',
   },
+  icons: [{ rel: "icon", url: "/icon.svg" }],
 }
 
 export default function RootLayout({
