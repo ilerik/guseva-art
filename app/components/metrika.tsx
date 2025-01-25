@@ -3,15 +3,15 @@
 import { useEffect } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import Script from "next/script";
+import { YANDEX_METRIKA_KEY } from "@/app/constants/analytics";
 
 export function Metrika() {
   const pathName = usePathname();
   const searchParams = useSearchParams();
-  const metrikaKey = 99524718;
 
   useEffect(() => {
     //@ts-ignore
-    ym(metrikaKey, "hit", window.location.href);
+    ym(YANDEX_METRIKA_KEY, "hit", window.location.href);
   }, [pathName, searchParams]);
 
   return (
@@ -23,7 +23,7 @@ export function Metrika() {
         k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
         (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-        ym(${metrikaKey}, "init", {
+        ym(${YANDEX_METRIKA_KEY}, "init", {
             defer: true,
             clickmap:true,
             trackLinks:true,

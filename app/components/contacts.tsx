@@ -1,13 +1,14 @@
 "use client"
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Send, Mail, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { useState } from "react"
 import { sendEmail } from "../actions/send-email"
 import Image from 'next/image'
+
+import { YANDEX_METRIKA_KEY } from "@/app/constants/analytics";
 
 export function Contacts() {
   const [isLoading, setIsLoading] = useState(false)
@@ -121,7 +122,12 @@ export function Contacts() {
               </label>
               <Textarea id="message" name="message" rows={4} required className="mt-1" />
             </div>
-            <Button type="submit" disabled={isLoading}>
+            <Button type="submit" disabled={isLoading}
+              onClick={() => {
+                // @ts-expect-error
+                ym(YANDEX_METRIKA_KEY, 'reachGoal', 'welcome_email');
+                return true;
+              }}>
               {isLoading ? "Sending..." : "Send Message"}
             </Button>
           </form>

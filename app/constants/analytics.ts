@@ -1,0 +1,1 @@
+export const YANDEX_METRIKA_KEY = 99524718; 
