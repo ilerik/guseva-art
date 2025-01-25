@@ -87,10 +87,10 @@ export function Contacts() {
             className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors"
           >
             <Image
-              src="/socials/whatsup-color.svg"
+              src="/socials/whatsapp-color.svg"
               width={24}
               height={24}
-              alt="Personal WhatsUp Link"              
+              alt="Personal WhatsApp Link"              
             />
             <span>WhatsApp</span>
           </a>
