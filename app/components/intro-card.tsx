@@ -31,12 +31,14 @@ export function IntroCard() {
               или тонкие эмоции в портретах, я надеюсь, что мое искусство найдет отклик 
               в вашей душе и пробудит ваше воображение.
             </p>
-            <div className="pt-4 flex space-x-4 items-center">
-              <Link href="/Larisa_Guseva_Portfolio.pdf" target="_blank" rel="noopener noreferrer">
+            <div className="pt-4 space-y-4 justify-items-center grid grid-cols-2 space-x-4 items-center">
+              <Link className="col-span-2" href="/Larisa_Guseva_Portfolio.pdf" target="_blank" rel="noopener noreferrer">
                 <Button>
                   <FileDown className="mr-2 h-4 w-4" /> Скачать портфолио (PDF)
                 </Button>
-              </Link>              
+              </Link>             
+                <span className="text-nowrap">или подписаться</span>
+                <div className="col-span-1 flex items-center space-x-2">
                 <a
                 href="https://opensea.io/guseva_art"
                 target="_blank"
@@ -79,6 +81,7 @@ export function IntroCard() {
                     alt="Ссылка на Telegram"              
                     />  
                 </a>
+                </div>
             </div>
           </div>
         </div>

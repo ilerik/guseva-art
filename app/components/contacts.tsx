@@ -52,7 +52,7 @@ export function Contacts() {
               height={24}
               alt="Personal Email Link"              
             />
-            <span>gusyani4@yandex.ru</span>
+            <span>gusyany4@yandex.ru</span>
           </a>
           <a
             href="https://instagram.com/guseva_art"
