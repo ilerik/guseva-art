@@ -22,15 +22,15 @@ export async function generateMetadata({ params }: PaintingPageProps): Promise<M
 
   if (!painting) {
     return {
-      title: "Painting Not Found",
+      title: "Работа не найдена",
     }
   }
 
   return {
-    title: `${painting.title} | Larisa Guseva Art`,
+    title: `${painting.title} | Галерея Ларисы Гусевой`,
     description: painting.description,
     openGraph: {
-      title: `${painting.title} | Larisa Guseva Art`,
+      title: `${painting.title} | Галерея Ларисы Гусевой`,
       description: painting.description,
       images: [
         {
@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: PaintingPageProps): Promise<M
     },
     twitter: {
       card: "summary_large_image",
-      title: `${painting.title} | Larisa Guseva Art`,
+      title: `${painting.title} | Галерея Ларисы Гусевой`,
       description: painting.description,
       images: [painting.src],
     },
