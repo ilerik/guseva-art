@@ -19,9 +19,9 @@ export async function sendEmail(formData: FormData) {
 
     // Send welcome email to the user
     const { data, error } = await resend.emails.send({
-      from: "Larisa Guseva Art <art@gusevalove.art>",
+      from: "Лариса Гусева <art@gusevalove.art>",
       to: [email],
-      subject: "Welcome to Larisa Guseva Art Gallery",
+      subject: "Добро пожаловать в галерею Ларисы Гусевой",
       react: WelcomeEmail({ name }) as React.ReactElement,
       attachments: [
         {
