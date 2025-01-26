@@ -19,7 +19,7 @@ export async function sendEmail(formData: FormData) {
 
     // Send welcome email to the user
     await resend.emails.send({
-      from: "Larisa Guseva Art <art@guseva.art>",
+      from: "Larisa Guseva Art <art@gusevalove.art>",
       to: email,
       subject: "Welcome to Larisa Guseva Art Gallery",
       react: WelcomeEmail({ name }) as React.ReactElement,
@@ -32,16 +32,16 @@ export async function sendEmail(formData: FormData) {
     })
 
     // Send notification email to admin
-    await resend.emails.send({
-      from: "Contact Form <art@guseva.art>",
-      to: "larisa@guseva.art",
-      subject: "New Contact Form Submission",
-      text: `
-        Name: ${name}
-        Email: ${email}
-        Message: ${message}
-      `,
-    })
+    // await resend.emails.send({
+    //   from: "Contact Form <art@gusevalove.art>",
+    //   to: "larisa@guseva.art",
+    //   subject: "New Contact Form Submission",
+    //   text: `
+    //     Name: ${name}
+    //     Email: ${email}
+    //     Message: ${message}
+    //   `,
+    // })
 
     return { success: true }
   } catch (error) {

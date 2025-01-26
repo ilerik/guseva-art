@@ -5,28 +5,29 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { useState } from "react"
-import { sendEmail } from "../actions/send-email"
+import { sendEmail } from "@/app/actions/send-email"
 import Image from 'next/image'
 
 import { YANDEX_METRIKA_KEY } from "@/app/constants/analytics";
+import { sendTelegramMessage } from "@/app/actions/send-tg-message";
 
 export function Contacts() {
   const [isLoading, setIsLoading] = useState(false)
 
   async function handleSubmit(formData: FormData) {
     setIsLoading(true)
-    try {
-      const result = await sendEmail(formData)
-
-      if (result.error) {        
-      } else {        
-        // Reset the form
-        const form = document.querySelector("form") as HTMLFormElement
-        form.reset()
-      }
+    try {    
+        const _result = await sendTelegramMessage(formData);
+        const result = await sendEmail(formData)
+        if (result.error) {        
+        } else {        
+            // Reset the form
+            const form = document.querySelector("form") as HTMLFormElement
+            form.reset()
+        }
     } catch (error) {    
     } finally {
-      setIsLoading(false)
+    setIsLoading(false)
     }
   }
 
