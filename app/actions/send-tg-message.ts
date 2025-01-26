@@ -4,7 +4,7 @@ import { Bot } from "grammy"
 import dedent from "dedent"
 
 const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
-const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID || 135379933
+const ADMINS = [380003773, 135379933];
 
 const bot = new Bot(TELEGRAM_BOT_TOKEN!)
 
@@ -20,7 +20,10 @@ export async function sendTelegramMessage(formData: FormData) {
     Email: ${email}
     Message: ${message}
     `
-    await bot.api.sendMessage(TELEGRAM_CHAT_ID, telegramMessage)
+
+    for (const adminId of ADMINS) {
+        await bot.api.sendMessage(adminId, telegramMessage)
+    }
 
     return { success: true }
   } catch (error) {

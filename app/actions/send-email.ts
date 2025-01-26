@@ -18,15 +18,15 @@ export async function sendEmail(formData: FormData) {
     }
 
     // Send welcome email to the user
-    await resend.emails.send({
+    const { data, error } = await resend.emails.send({
       from: "Larisa Guseva Art <art@gusevalove.art>",
-      to: email,
+      to: [email],
       subject: "Welcome to Larisa Guseva Art Gallery",
       react: WelcomeEmail({ name }) as React.ReactElement,
       attachments: [
         {
           filename: "Larisa_Guseva_Portfolio.pdf",
-          path: "public/Larisa_Guseva_Portfolio.pdf",
+          path: "https://gusevalove.art/Larisa_Guseva_Portfolio.pdf",
         },
       ],
     })
@@ -42,6 +42,10 @@ export async function sendEmail(formData: FormData) {
     //     Message: ${message}
     //   `,
     // })
+
+    if (error) throw(error);
+    
+    console.log('Success sending email:', data);
 
     return { success: true }
   } catch (error) {
