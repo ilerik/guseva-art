@@ -8,14 +8,14 @@ import Script from "next/script"
 import type { Metadata } from 'next'
  
 export const metadata: Metadata = {
-  title: 'Guseva Art Gallery',
-  description: 'Explore the vibrant world of fashion illustration and painting by Larisa Guseva.',
+  title: 'Художественная Галерея Ларисы Гусевой',
+  description: 'Откройте для себя яркий мир модной иллюстрации и живописи Ларисы Гусевой.',
   verification: {
     yandex: "e16fcf10e2fb2b44",
   },
   openGraph: {
-    title: 'Guseva Art Gallery',
-    description: 'Explore the vibrant world of fashion illustration and painting by Larisa Guseva.',
+    title: 'Художественная Галерея Ларисы Гусевой',
+    description: 'Откройте для себя яркий мир модной иллюстрации и живописи Ларисы Гусевой.',
   },
   icons: [{ rel: "icon", url: "/icon.svg" }],
 }
