@@ -9,7 +9,7 @@ export function Header() {
         <div className="flex items-center">
           <Link href="/">
             <Image
-              src="guseva.png"
+              src="/guseva.png"
               alt="Логотип Guseva Art"
               width={100}
               height={30}
