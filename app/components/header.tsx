@@ -10,7 +10,7 @@ export function Header() {
           <Link href="/">
             <Image
               src="guseva.png"
-              alt="Guseva Art Logo"
+              alt="Логотип Guseva Art"
               width={100}
               height={30}
               className=""
@@ -26,49 +26,7 @@ export function Header() {
           </Link>
           <Link href="/#contacts" className="text-foreground hover:text-primary transition-colors">
             Контакты
-          </Link>
-          <a
-            href="https://opensea.io/guseva_art"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-foreground hover:text-primary transition-colors"
-            aria-label="Instagram"
-          >
-            <Image
-              src="/socials/opensea-color.svg"
-              width={24}
-              height={24}
-              alt="OpenSea Link"              
-            />
-          </a>
-          <a
-            href="https://instagram.com/guseva_art"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-foreground hover:text-primary transition-colors"
-            aria-label="Instagram"
-          >
-            <Image
-              src="/socials/instagram-color.svg"
-              width={24}
-              height={24}
-              alt="Instagram Link"              
-            />            
-          </a>
-          <a
-            href="https://t.me/teleguseva"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-foreground hover:text-primary transition-colors"
-            aria-label="Telegram"
-          >
-            <Image
-              src="/socials/telegram-color.svg"
-              width={24}
-              height={24}
-              alt="Telegram Link"              
-            />  
-          </a>
+          </Link>        
         </nav>
       </div>
     </header>

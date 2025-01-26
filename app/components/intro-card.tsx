@@ -31,12 +31,54 @@ export function IntroCard() {
               или тонкие эмоции в портретах, я надеюсь, что мое искусство найдет отклик 
               в вашей душе и пробудит ваше воображение.
             </p>
-            <div className="pt-4">
+            <div className="pt-4 flex space-x-4 items-center">
               <Link href="/Larisa_Guseva_Portfolio.pdf" target="_blank" rel="noopener noreferrer">
                 <Button>
-                  <FileDown className="mr-2 h-4 w-4" /> Скачать полное портфолио (PDF)
+                  <FileDown className="mr-2 h-4 w-4" /> Скачать портфолио (PDF)
                 </Button>
-              </Link>
+              </Link>              
+                <a
+                href="https://opensea.io/guseva_art"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground hover:text-primary transition-colors"
+                aria-label="Instagram"
+                >
+                <Image
+                    src="/socials/opensea-color.svg"
+                    width={24}
+                    height={24}
+                    alt="Ссылка на OpenSea"              
+                    />
+                </a>
+                <a
+                    href="https://instagram.com/guseva_art"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-foreground hover:text-primary transition-colors"
+                    aria-label="Instagram"
+                >
+                    <Image
+                    src="/socials/instagram-color.svg"
+                    width={24}
+                    height={24}
+                    alt="Ссылка на Instagram"              
+                    />            
+                </a>
+                <a
+                href="https://t.me/teleguseva"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground hover:text-primary transition-colors"
+                aria-label="Telegram"
+                >
+                    <Image
+                    src="/socials/telegram-color.svg"
+                    width={24}
+                    height={24}
+                    alt="Ссылка на Telegram"              
+                    />  
+                </a>
             </div>
           </div>
         </div>

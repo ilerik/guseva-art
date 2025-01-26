@@ -43,7 +43,7 @@ export function Contacts() {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <a
-            href="mailto:gusyani4@yandex.ru"
+            href="mailto:gusyany4@yandex.ru"
             className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors"
           >
             <Image
