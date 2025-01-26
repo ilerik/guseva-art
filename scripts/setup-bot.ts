@@ -6,7 +6,7 @@ dotenv.config();
 const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 
 if (!BOT_TOKEN) {
-  throw new Error("BOT_TOKEN is not defined in environment variables");
+  throw new Error("Токен бота не определен в переменных окружения");
 }
 
 async function setupBot() {
@@ -44,7 +44,7 @@ async function setupBot() {
     // Bot information to set
     const botInfo = {
       description: "Приветствую! Я виртуальный ассистент художника Ларисы Гусевой. Помогу вам узнать больше о её творчестве, выставках и мастер-классах. Могу рассказать о доступных работах, ответить на вопросы о технике живописи и поделиться историями создания картин.",
-      short_description: "Арт-ассистент Ларисы Гусевой",
+      short_description: "Арт-ассистент Ларисы Гусевой https://gusevalove.art",
       about: "Я представляю творчество художника Ларисы Гусевой. Помогаю коллекционерам и ценителям искусства узнавать о новых работах, выставках и событиях. Отвечаю на вопросы о картинах, творческом процессе и возможности приобретения работ.",
       commands: [
         { command: "start", description: "Начать общение" },
@@ -85,9 +85,9 @@ async function setupBot() {
     // const photo = await fs.readFile(photoPath);
     // await bot.api.setProfilePhoto({ photo });     
 
-    console.log("✅ Bot settings updated successfully!");
+    console.log("✅ Настройки бота успешно обновлены!");
   } catch (error) {
-    console.error("❌ Error setting up bot:", error);
+    console.error("❌ Ошибка при настройке бота:", error);
     process.exit(1);
   }
 }

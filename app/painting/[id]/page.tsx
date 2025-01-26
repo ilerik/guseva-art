@@ -73,11 +73,11 @@ export default function PaintingPage({ params }: PaintingPageProps) {
                 ? 'bg-blue-500/80 text-white' 
                 : 'bg-purple-500/80 text-white'}
             `}>
-              {currentPainting.type === 'physical' ? 'Physical' : 'Digital'}
+              {currentPainting.type === 'physical' ? 'Оригинал' : 'Цифровая'}
             </span>
             {currentPainting.sold && (
               <span className="px-2 py-1 rounded-full text-sm font-medium bg-red-500/80 text-white">
-                Sold
+                Продано
               </span>
             )}
           </div>
@@ -118,7 +118,7 @@ export default function PaintingPage({ params }: PaintingPageProps) {
               href={`/painting/${prevPainting.id}`}
               className="text-primary hover:underline"
             >
-              ← Previous: {prevPainting.title}
+              ← Предыдущая: {prevPainting.title}
             </Link>
           )}
           {nextPainting && (
@@ -126,7 +126,7 @@ export default function PaintingPage({ params }: PaintingPageProps) {
               href={`/painting/${nextPainting.id}`}
               className="text-primary hover:underline ml-auto"
             >
-              Next: {nextPainting.title} →
+              Следующая: {nextPainting.title} →
             </Link>
           )}
         </div>

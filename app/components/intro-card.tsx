@@ -8,33 +8,33 @@ export function IntroCard() {
   return (
     <Card className="mb-8">
       <CardHeader>
-        <CardTitle className="text-3xl font-bold">Welcome to My Art Gallery</CardTitle>
-        <CardDescription>A journey through colors and emotions</CardDescription>
+        <CardTitle className="text-3xl font-bold">Добро пожаловать в мою галерею</CardTitle>
+        <CardDescription>Путешествие через цвета и эмоции</CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         <div className="flex flex-col md:flex-row gap-6">         
           <div className="md:w-2/3 space-y-4">
             <p className="text-lg">
-              Hello! I'm Larisa Guseva, and I'm thrilled to welcome you to my digital art sanctuary. 
-              As a passionate artist with roots in classical education from Chelyabinsk, Russia, 
-              I've dedicated my life to exploring the boundless realms of creativity through fashion illustration and painting.
+              Здравствуйте! Я Лариса Гусева, и я рада приветствовать вас в моем цифровом арт-пространстве. 
+              Как художник с классическим образованием из Челябинска, я посвятила свою жизнь исследованию 
+              безграничных возможностей творчества через модную иллюстрацию и живопись.
             </p>
             <p className="text-lg">
-              My art is a fusion of traditional techniques and contemporary vision, 
-              capturing the essence of fashion, beauty, and human emotion. Each piece 
-              is a testament to my journey as an artist and my endless fascination with 
-              the power of visual storytelling.
+              Мое искусство - это сочетание традиционных техник и современного видения, 
+              отражающее сущность моды, красоты и человеческих эмоций. Каждая работа - 
+              это свидетельство моего пути как художника и бесконечного увлечения силой 
+              визуального повествования.
             </p>
             <p className="text-lg">
-              I invite you to explore my gallery, where each artwork is a window into my 
-              creative world. Whether you're drawn to the bold strokes of my fashion 
-              illustrations or the nuanced emotions in my portraits, I hope my art resonates 
-              with you and sparks your own imagination.
+              Приглашаю вас исследовать мою галерею, где каждое произведение искусства - 
+              это окно в мой творческий мир. Будь то смелые штрихи моих модных иллюстраций 
+              или тонкие эмоции в портретах, я надеюсь, что мое искусство найдет отклик 
+              в вашей душе и пробудит ваше воображение.
             </p>
             <div className="pt-4">
               <Link href="/Larisa_Guseva_Portfolio.pdf" target="_blank" rel="noopener noreferrer">
                 <Button>
-                  <FileDown className="mr-2 h-4 w-4" /> Download Full Portfolio (PDF)
+                  <FileDown className="mr-2 h-4 w-4" /> Скачать полное портфолио (PDF)
                 </Button>
               </Link>
             </div>

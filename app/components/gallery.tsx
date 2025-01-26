@@ -6,7 +6,7 @@ import { paintings } from '@/app/constants'
 export function Gallery() {
   return (
     <div id='gallery'>
-    <h2 className="text-2xl font-bold mb-4">My Artworks</h2>
+    <h2 className="text-2xl font-bold mb-4">Мои работы</h2>
     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
       {paintings.map((painting, index) => (
         <Link 
@@ -31,11 +31,11 @@ export function Gallery() {
                 ? 'bg-blue-500/80 text-white' 
                 : 'bg-purple-500/80 text-white'}
             `}>
-              {painting.type === 'physical' ? 'Physical' : 'Digital'}
+              {painting.type === 'physical' ? 'Оригинал' : 'Цифровая'}
             </span>
             {painting.sold && (
               <span className="px-2 py-1 rounded-full text-xs font-medium bg-red-500/80 text-white">
-                Sold
+                Продано
               </span>
             )}
           </div>

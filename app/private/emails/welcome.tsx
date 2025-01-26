@@ -12,28 +12,28 @@ export default function WelcomeEmail({ name }: WelcomeEmailProps) {
   return (
     <Html>
       <Head />
-      <Preview>Welcome to Larisa Guseva Art Gallery</Preview>
+      <Preview>Добро пожаловать в галерею Ларисы Гусевой</Preview>
       <Body style={main}>
         <Container style={container}>
-          <Heading style={h1}>Welcome to My Art Gallery, {name}!</Heading>
+          <Heading style={h1}>Добро пожаловать в мою галерею, {name}!</Heading>
 
           <Text style={text}>
-            Thank you for reaching out! I'm excited to share my artwork with you. Here are some of my recent works that
-            you might enjoy:
+            Спасибо за ваше обращение! Я рада поделиться с вами своим творчеством. Вот несколько моих недавних работ, 
+            которые могут вам понравиться:
           </Text>
 
           <Section style={gallerySection}>
             {featuredPaintings.map((painting) => (
               <div key={painting.id} style={paintingContainer}>
-                <Img src={painting.src} alt={painting.title} width="200" height="200" style={paintingImage} />
+                <Img src={`https://gusevalove.art/${painting.src}`} alt={painting.title} width="200" height="200" style={paintingImage} />
                 <Text style={paintingTitle}>{painting.title}</Text>
               </div>
             ))}
           </Section>
 
           <Text style={text}>
-            I've attached a high-resolution portfolio to this email for you to explore more of my work. Feel free to
-            reach out if you have any questions or if you're interested in commissioning a piece.
+            Я прикрепила к этому письму портфолио в высоком разрешении, чтобы вы могли подробнее ознакомиться с моими работами. 
+            Не стесняйтесь обращаться, если у вас возникнут вопросы или если вы заинтересованы в заказе картины.
           </Text>
 
           <Section style={socialSection}>
@@ -47,9 +47,9 @@ export default function WelcomeEmail({ name }: WelcomeEmailProps) {
           </Section>
 
           <Text style={footer}>
-            Best regards,
+            С наилучшими пожеланиями,
             <br />
-            Larisa Guseva
+            Лариса Гусева
           </Text>
         </Container>
       </Body>

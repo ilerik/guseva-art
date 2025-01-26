@@ -34,12 +34,12 @@ export function Contacts() {
   return (
     <Card className="mt-8" id="contacts">
       <CardHeader>
-        <CardTitle className="text-2xl font-bold">Contact Me</CardTitle>
+        <CardTitle className="text-2xl font-bold">Связаться со мной</CardTitle>
       </CardHeader>
       <CardContent className="grid gap-6">
         <p className="text-lg">
-          I'd love to hear from you! Whether you're interested in purchasing a piece, commissioning work, or just want
-          to chat about art, feel free to reach out through any of these channels:
+          Буду рада общению с вами! Если вы хотите приобрести картину, заказать работу или просто 
+          поговорить об искусстве, свяжитесь со мной любым удобным способом:
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <a
@@ -98,15 +98,15 @@ export function Contacts() {
           </a>
         </div>
         <div className="mt-6">
-          <h3 className="text-xl font-semibold mb-2">Send me a message</h3>
+          <h3 className="text-xl font-semibold mb-2">Отправить сообщение</h3>
           <p className="text-sm text-muted-foreground mb-4">
-            Get in touch and receive a complimentary high-resolution portfolio!
+            Свяжитесь со мной и получите портфолио в высоком разрешении!
           </p>
           <form action={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-                  Name
+                  Имя
                 </label>
                 <Input type="text" id="name" name="name" required className="mt-1" />
               </div>
@@ -119,7 +119,7 @@ export function Contacts() {
             </div>
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-                Message
+                Сообщение
               </label>
               <Textarea id="message" name="message" rows={4} required className="mt-1" />
             </div>
@@ -129,7 +129,7 @@ export function Contacts() {
                 ym(YANDEX_METRIKA_KEY, 'reachGoal', 'welcome_email');
                 return true;
               }}>
-              {isLoading ? "Sending..." : "Send Message"}
+              {isLoading ? "Отправка..." : "Отправить сообщение"}
             </Button>
           </form>
         </div>

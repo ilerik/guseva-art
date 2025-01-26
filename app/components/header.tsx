@@ -19,13 +19,13 @@ export function Header() {
         </div>
         <nav className="flex items-center space-x-4">
           <Link href="/#gallery" className="text-foreground hover:text-primary transition-colors">
-            Gallery
+            Галерея
           </Link>
-          <Link href="/about" className="text-foreground hover:text-primary transition-colors">
-            About
+          <Link href="/about" className="text-nowrap text-foreground hover:text-primary transition-colors">
+            Обо мне
           </Link>
           <Link href="/#contacts" className="text-foreground hover:text-primary transition-colors">
-            Contacts
+            Контакты
           </Link>
           <a
             href="https://opensea.io/guseva_art"
