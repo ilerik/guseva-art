@@ -25,14 +25,9 @@ export function Gallery() {
             <h3 className="text-white text-xl font-semibold px-4 text-center">{painting.title}</h3>
           </div>
           <div className="absolute bottom-2 left-2 flex gap-2">
-            <span className={`
-              px-2 py-1 rounded-full text-xs font-medium
-              ${painting.type === 'physical' 
-                ? 'bg-blue-500/80 text-white' 
-                : 'bg-purple-500/80 text-white'}
-            `}>
-              {painting.type === 'physical' ? 'Оригинал' : 'Цифровая'}
-            </span>
+            {painting.type === 'digital' && <span className={`px-2 py-1 rounded-full text-xs font-medium bg-purple-500/80 text-white`}>
+              Цифровая
+            </span>}
             {painting.sold && (
               <span className="px-2 py-1 rounded-full text-xs font-medium bg-red-500/80 text-white">
                 Продано

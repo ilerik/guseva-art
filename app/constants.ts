@@ -1,3 +1,5 @@
+import dedent from "dedent";
+
 export interface Painting {
     id: number;
     title: string;
@@ -12,185 +14,222 @@ export const paintings: Painting[] = [
 { 
     title: `Schiaparelli`, 
     src: `/works/schiaparelli-ss-2024.jpg`,
-    description: `Минималистичная модная иллюстрация, передающая суть роскоши через белое двубортное пальто. Драматичные белые мазки на коричневом фоне создают яркий контраст, подчеркивающий элегантный силуэт одежды.`,
+    description: dedent`Digital media
+    Limited edition print
+    `,
     span: true,
-    type: 'physical' as const,
+    type: 'digital' as const,
 },
 { 
     title: `Sporty Chic`, 
     src: `/works/miumiu-celeb-ss-2024.jpg`,
-    description: `Современный портрет, демонстрирующий городскую спортивную одежду, с яркими красными тонами и динамичной композицией, объединяющей моду и уличный стиль.`,
-    type: 'digital' as const,
+    description: dedent`Fashion-portrait inspired MIU MIU
+    Material: watercolor/Ink
+    `,
+    type: 'physical' as const,
     sold: true
 },
 { 
     title: `Pop Culture`, 
     src: `/works/enjoy.jpg`,
-    description: `Игривый взгляд на иконографию поп-культуры с яркими красными цветами и выразительным портретом, бросающим вызов узнаваемости бренда и идентичности.`,
-    type: 'digital' as const
+    description: dedent` Fashion portrait
+    Material: markers on paper
+    `,
+    type: 'physical' as const
 },
 { 
     title: `Spring Bloom`, 
     src: `/works/spring-bloom.jpg`,
-    description: `Нежный акварельный портрет, где природа встречается с красотой, с тонкими цветочными элементами и выразительными голубыми глазами, которые погружают зрителя в момент созерцания.`,
+    description: dedent` Watercolor portrait
+    Material: watercolor
+    `,
     type: 'physical' as const
 },
 { 
     title: `Lockdown`, 
     src: `/works/lockdown.jpg`,
-    description: `Смелый комментарий о люксовой моде, с дизайнерской маской, выполненной в богатых золотых и глубоких черных тонах, исследующий темы идентичности и брендинга.`,
-    type: 'digital' as const
+    description: dedent` Fashion portrait
+    Material: markers on paper
+    `,
+    type: 'physical' as const
 },
 { 
     title: `Golden Feathers`, 
     src: `/works/schiaparelli.jpg`,
-    description: `Роскошный портрет, украшенный изысканными золотыми перьями, сочетающий моду и природные элементы в гармоничном празднике красоты и текстуры.`,      
+    description: dedent` Fashion portrait inspired Schiaparelli
+    Material: Watercolor/Ink 
+    `,
     type: 'physical' as const
 },
 { 
-    title: `Dior SS24 Collection`, 
+    title: `Dior`, 
     src: `/works/dior-ss24-collection.jpg`,
-    description: `Показ коллекции Dior Весна/Лето 2024, демонстрирующий элегантные дизайны и роскошные ткани, подчеркивающие приверженность бренда мастерству и инновациям.`,
+    description: dedent`SS2024 collection
+    Material: Watercolor/Ink
+    `,
     type: 'physical' as const
 },    
 { 
-    title: `Mother Russia`, 
+    title: `Schiaparelli`, 
     src: `/works/mother_russia.jpg`,
-    description: `Эмоциональный портрет, сочетающий традиционные русские элементы с современной модой, передающий суть культурного наследия и современного стиля.`,
+    description: dedent`Fashion portrait inspired Schiaparelli couture collection 2024
+    Material: Ink on paper
+    `,
     span: true,
     type: 'physical' as const
 },
 { 
-    title: `Balmain SS24`, 
+    title: `Balmain`, 
     src: `/works/balmain-ss24.jpg`,
-    description: `Яркая работа из коллекции Balmain Весна/Лето 2024, демонстрирующая смелые дизайны и сложные детали, отражающие авангардный подход бренда к моде.`,
+    description: dedent` Fashion illustration inspired SS2024 collection
+    Material: Watercolor/Ink
+    `,
     type: 'physical' as const
 },
 { 
-    title: `Dior AW24`, 
+    title: `Dior`, 
     src: `/works/dior-aw-2024-collection.jpg`,
-    description: `Highlight коллекции Dior Осень/Зима 2024, представляющий изысканные силуэты и богатые текстуры, воплощающие вневременную элегантность бренда.`,
-    type: 'physical' as const
+    description: dedent`Fashion portrait 
+    AW2024 Collection
+    `,
+    type: 'digital' as const
 },
 { 
-    title: `Dior Backstage SS24`, 
+    title: `Dior`, 
     src: `/works/dior-backstage-ss-2024.jpg`,
-    description: `Закулисный взгляд на коллекцию Dior Весна/Лето 2024, передающий энергию и креативность подготовки к модному показу.`,
-    type: 'physical' as const
+    description: dedent` Backstage SS2024 Collection
+    `,
+    type: 'digital' as const
 },
 { 
-    title: `Dior SS2024`, 
+    title: `Dior`, 
     src: `/works/dior-ss2024.jpg`,
-    description: `Работа из коллекции Dior Весна/Лето 2024, с нежными цветочными мотивами и утонченным мастерством, подчеркивающими преданность бренда красоте и элегантности.`,
-    type: 'physical' as const
+    description: dedent`Fashion illustration inspired Dior SS 2024 Collection`,
+    type: 'digital' as const
 },
 { 
-    title: `Giambattistavalli AW2024`, 
+    title: `Giambattistavalli`, 
     src: `/works/giambattistavalli-aw24.jpg`,
-    description: `Показ коллекции Giambattistavalli Осень/Зима 2024, демонстрирующий роскошные ткани и сложные дизайны, отражающие роскошный стиль бренда.`,
+    description: dedent`AW2024 Collection
+    Material: Watercolor/Ink
+    `,
     type: 'physical' as const
 },
 // New entries
 { 
     title: `Lemon`, 
     src: `/works/lemon.jpg`,
-    description: ``,
+    description: dedent`Watercolor portrait
+    Material: watercolor on paper`,
     type: 'physical' as const
 },
 { 
-    title: `Loewe Backstage SS24`, 
+    title: `Loewe`, 
     src: `/works/loewe-backstage-ss24.jpg`,
-    description: `Закулисный взгляд на коллекцию Loewe SS24, передающий энергию и волнение модного показа.`,
-    type: 'physical' as const
+    description: dedent`Backstage SS2024`,
+    type: 'digital' as const
 },
 { 
-    title: `Loewe SS24`, 
+    title: `Loewe`, 
     src: `/works/loewe-ss24.jpg`,
-    description: `Показ коллекции Loewe SS24, представляющий смелые дизайны и инновационную моду.`,
-    type: 'physical' as const
+    description: dedent`Fashion illustration inspired LOEWE SS2024 Collection`,
+    type: 'digital' as const
 },
 { 
-    title: `Louis Vuitton SS24`, 
+    title: `Louis Vuitton`, 
     src: `/works/louis-vuitton-ss24.jpg`,
-    description: `Highlight коллекции Louis Vuitton SS24, подчеркивающий роскошь и мастерство.`,
+    description: dedent`Backstage SS2024 Collection
+    Material: Watercolor/Ink`,
     type: 'physical' as const
 },
 { 
-    title: `Miu Miu Celeb SS24 Collection`, 
+    title: `Miu Miu`, 
     src: `/works/miumiu-celeb-ss24-collection.jpg`,
-    description: `Вдохновленная знаменитостями коллекция от Miu Miu, сочетающая высокую моду со звездным влиянием.`,
+    description: dedent`Celeb SS24 Collection
+    Material: Watercolor/Ink`,
     type: 'physical' as const
 },
 { 
     title: `Russian Style`, 
     src: `/works/russian-style.jpg`,
-    description: `Исследование традиционной русской моды с замысловатыми узорами и богатыми цветами.`,
+    description: dedent`Fashion portrait
+    Material: Watercolor/Ink`,
     type: 'physical' as const
 },
 { 
-    title: `Schiaparelli Haute Couture 2024`, 
+    title: `Schiaparelli`, 
     src: `/works/schiaparelli-haute-couture-2024.jpg`,
-    description: `Работа от-кутюр из коллекции Schiaparelli 2024, демонстрирующая безупречное мастерство и дизайн.`,
-    type: 'physical' as const
+    description: dedent`Haute Couture 2024`,
+    type: 'digital' as const
 },
 { 
-    title: `Schiaparelli Haute Couture Collection 24`, 
+    title: `Schiaparelli`, 
     src: `/works/schiaparelli-haute-couture-collection24.jpg`,
-    description: `Коллекция работ от-кутюр из линии Schiaparelli 2024, подчеркивающая роскошь и элегантность.`,
+    description: dedent`Haute Couture Collection 24
+    Material: Watercolor/Ink on paper`,
     type: 'physical' as const
 },
 { 
     title: `Streetstyle PFW 2024`, 
     src: `/works/streetstyle-pfw2024.jpg`,
-    description: `Моментальный снимок уличного стиля во время Парижской недели моды 2024, запечатлевший последние тренды и стили.`,
+    description: dedent`Fashion illustration
+    Material: Watercolor/Ink`,
     type: 'physical' as const
 },
 { 
-    title: `Valentino AW 2024`, 
+    title: `Valentino`, 
     src: `/works/Valentino-aw 2024.jpg`,
-    description: `Работа из коллекции Valentino Осень/Зима 2024, представляющая изысканные дизайны и богатые ткани.`,
+    description: dedent`Fashion portrait inspired AW 2024 collection
+    Material: Watercolor/Ink`,
     type: 'physical' as const
 },
 { 
-    title: `Valentino AW 2024`, 
+    title: `Valentino`, 
     src: `/works/valentino-aw- 2024.jpg`,
-    description: `Работа из коллекции Valentino Осень/Зима 2024, представляющая изысканные дизайны и богатые ткани.`,
-    type: 'physical' as const
+    description: dedent`AW 2024 Collection`,
+    type: 'digital' as const
 },
 { 
-    title: `Valentino AW 2024`, 
+    title: `Valentino`, 
     src: `/works/valentino-aw-2024.jpg`,
-    description: `Работа из коллекции Valentino Осень/Зима 2024, представляющая изысканные дизайны и богатые ткани.`,
+    description: dedent`Fashion portrait inspired  AW 2024 collection
+    Material: watercolor/Ink`,
     type: 'physical' as const
 },
 { 
-    title: `YSL AW 2024 Collection`, 
+    title: `YSL`, 
     src: `/works/ysl-aw-2024-collection.jpg`,
-    description: `Коллекция Yves Saint Laurent Осень/Зима 2024, демонстрирующая вневременную элегантность и современный стиль.`,
-    type: 'physical' as const
+    description: dedent`AW 2024 Collection`,
+    type: 'digital' as const
 },
 { 
-    title: `YSL SS24 Part 1`, 
+    title: `YSL`, 
     src: `/works/ysl-ss24-part1.jpg`,
-    description: `Первая часть коллекции Yves Saint Laurent Весна/Лето 2024, представляющая свежие и инновационные дизайны.`,
+    description: dedent`Diptych SS24 collection
+    Part 1 
+    Material: Watercolor/Ink`,
     type: 'physical' as const
 },
 { 
-    title: `YSL SS24 Part 2`, 
+    title: `YSL`, 
     src: `/works/ysl-ss24-part2.jpg`,
-    description: `Вторая часть коллекции Yves Saint Laurent Весна/Лето 2024, продолжающая тему свежих и инновационных дизайнов.`,
+    description: dedent`Diptych SS24 collection
+    Part 2
+    Material: watercolor/Ink`,
     type: 'physical' as const
 },
 { 
-    title: `YSL SS204`, 
+    title: `YSL`, 
     src: `/works/ysl-ss204.jpg`,
-    description: `Работа из коллекции Yves Saint Laurent Весна/Лето 204, демонстрирующая вневременную элегантность и современный стиль.`,
-    type: 'physical' as const
+    description: dedent`Fashion illustration inspired SS2024 collection`,
+    type: 'digital' as const
 },
 { 
-    title: `Zendaya Met Gala 2024`, 
+    title: `Zendaya`, 
     src: `/works/zendaya-metgala2024.jpg`,
-    description: `Потрясающий портрет Зендаи на Met Gala 2024, передающий её элегантность и стиль.`,
+    description: dedent`Fashion portrait to Zendaya 
+    Met GALA 2024
+    Material: Watercolor/Ink`,
     type: 'physical' as const
 }
 ].map((item, index) => {return { id: index, ...item }});
