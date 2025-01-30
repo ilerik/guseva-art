@@ -25,7 +25,7 @@ export default function WelcomeEmail({ name }: WelcomeEmailProps) {
           <Section style={gallerySection}>
             {featuredPaintings.map((painting) => (
               <div key={painting.id} style={paintingContainer}>
-                <Img src={`https://gusevalove.art/${painting.src}`} alt={painting.title} width="400" height="400" style={paintingImage} />
+                <Img src={`https://gusevalove.art/${painting.src}`} alt={painting.title} width="600" height="600" style={paintingImage} />
                 <Text style={paintingTitle}>{painting.title}</Text>
               </div>
             ))}

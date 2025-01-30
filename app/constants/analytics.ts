@@ -1,1 +1,1 @@
-export const YANDEX_METRIKA_KEY = 99524718; 
+export const YANDEX_METRIKA_KEY = 99524718;

@@ -94,7 +94,7 @@ export const paintings: Painting[] = [
 { 
     title: `Lemon`, 
     src: `/works/lemon.jpg`,
-    description: `Яркое изображение лимона, демонстрирующее насыщенный желтый цвет и текстурированную поверхность.`,
+    description: ``,
     type: 'physical' as const
 },
 { 
