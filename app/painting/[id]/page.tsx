@@ -111,7 +111,9 @@ export default function PaintingPage({ params }: PaintingPageProps) {
             </Link>
           )}
         </div>
-        <p className="text-lg leading-relaxed">{currentPainting.description}</p>
+        {currentPainting.description.split('\n').map((text) => {
+          return <p className="text-lg leading-relaxed">{text}</p>
+        })}        
         <Link
           href="/#contacts"
           className="inline-flex items-center justify-center px-4 py-2 rounded-md bg-primary text-white hover:bg-primary/90 transition-colors"
